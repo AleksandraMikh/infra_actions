@@ -1,0 +1,25 @@
+# This is a basic workflow that is manually triggered
+
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Send greeting
+      run: echo "Hello ${{ github.event.inputs.name }}"
+      
+    - name: multiline script
+      run:  |
+        echo Add other actions to build
+        echo test and deploy your project.
