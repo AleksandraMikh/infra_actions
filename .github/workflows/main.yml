@@ -17,9 +17,9 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Send greeting
-      run: echo "Hello world"
+      run: echo Hello world
       
     - name: multiline script
       run:  |
-        echo Add other actions to build
+        echo Add other actions to build,
         echo test and deploy your project.
